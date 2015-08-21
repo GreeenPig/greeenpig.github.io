@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>2048</title>
+        <link rel = "stylesheet" type="text/css" href="style.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+        <script src = "2048.js"></script>
+    </head>
+    <body>
+        <h1>2048</h1>
+        <div id="container"></div>
+        <div class="userinput">
+            <input id="inputCol" value = 4 maxlength = 1>
+            <span class = "X">X</span>
+            <input id="inputRow" value = 4 maxlength = 1>
+        </div>
+        <button id ="newGame" onclick="newGame();">New Game</button>
+        <script>
+            var game = new Game(new View());
+        
+            window.onkeydown = function (e) {
+                var key = e.keyCode ? e.keyCode : e.which;
+                if (key == 38) {
+                    game.move("UP");
+                } else if (key == 40) {
+                    game.move("DOWN");
+                } else if (key == 39) {
+                    game.move("RIGHT");
+                } else if (key == 37) {
+                    game.move("LEFT");
+                }
+            };
+            
+            function newGame() {
+                ROWS = parseInt(document.getElementById("inputRow").value);
+                COLS = parseInt(document.getElementById("inputCol").value);
+                if (ROWS % 1 !== 0 || COLS % 1 !== 0 || ROWS == 0 || COLS == 0) {
+                    ROWS = 4;
+                    COLS = 4;
+                }
+                game.reset();
+            }
+        </script>
+    </body>
+</html>

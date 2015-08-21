@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Game of Life</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type ="text/css" href="style.css">
+        <script src = "gameoflife.js"></script>
+    </head>
+    <body>
+        <div id = "container"></div>
+        <div id = "controls">
+            <button onclick="game.update();">Next step</button>
+        </div>
+        <div id = "rules">
+            <p>Rules:</p>
+            <ol>
+                <li>Living cells with fewer than two living neighbours will die</li>
+                <li>Living cells with two or three living neighbours will survive</li>
+                <li>Living cells with more than three living neighbours will die</li>
+                <li>Dead cells with exactly three living neighbours will come to live</li> 
+            </ol>
+        </div>
+        <script>
+            var game = new Game(new View());
+            game.init(COLS, ROWS);
+        </script>
+    </body>
+
+</html>

@@ -1,0 +1,120 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+body {
+    background-color: black;
+    text-align: center;
+}
+
+h1 {
+    font-size: 4em;
+    color: white;
+    font-family: Helvetica, Arial;
+}
+
+div.userinput {
+    margin-top: 40px;
+}
+
+input {
+    width: 40px;
+    height: 40px;
+    font-size: 40px;
+    text-align: center;
+}
+
+span.X {
+    color: white;
+    font: 40px sans-serif;
+    margin: 20px;
+}
+
+button#newGame {
+    margin: 20px;
+    font-size: 25px;
+}
+
+div#container {
+    width: 400px;
+    height: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    border: 2px cyan solid;
+
+}
+
+.grid {
+    width: 90px;
+    height: 90px;
+    border: 5px white solid;
+    background-color: #dddddd;
+    float: left;
+}
+
+.block {
+    width: 90px;
+    height: 90px;
+    margin-left: -100px;
+    border-radius: 8%;
+    border: 5px solid white;
+    font-size: 30px;
+    font-family: Helvetica, Arial;
+    float: left;
+    text-align: center;
+    line-height: 90px;
+    vertical-align: middle;
+    position: relative;
+}
+
+.block.value2, .block.value4, .block.value8 {
+    font-size: 60px;
+}
+.block.value8, .block.value16, .block.value32, .block.value64 {
+    font-size: 55px;
+}
+.block.value128, .block.value256, .block.value512 {
+    font-size: 50px;
+}
+.block.value1024, .block.value2048, .block.value4096 {
+    font-size: 40px;
+}
+
+.block.value2 {
+    background-color: #f8f7ff;
+}
+.block.value4 {
+    background-color: #c7ffd3;
+}
+.block.value8 {
+    background-color: #67ff83;
+}
+.block.value16 {
+    background-color: #3dffcb;
+}
+.block.value32 {
+    background-color: #2efff8;
+}
+.block.value64 {
+    background-color: #39bcff;
+}
+.block.value128 {
+    background-color: #3372ff;
+}
+.block.value256 {
+    background-color: #623bff;
+}
+.block.value512 {
+    background-color: #9326ff;
+}
+.block.value1024 {
+    background-color: #d320ff;
+}
+.block.value2048 {
+    background-color: #ff0a6b;
+}
+.block.value4096 {
+    background-color: #ffb017;
+}
